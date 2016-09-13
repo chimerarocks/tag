@@ -22,12 +22,20 @@ abstract class AbstactTestCase extends TestCase
 	        'database' => ':memory:',
 	        'prefix'   => '',
 	    ]);
+		$app->bind(
+			\ChimeraRocks\Tag\Models\Contracts\PostInterface::class,
+				\Test\Tag\Stubs\Models\Post::class
+		);
 	}
 
 	public function migrate()
 	{
 		$this->artisan('migrate', [
 			'--realpath' => realpath(__DIR__ . '/../../src/resources/migrations')
+		]);
+
+		$this->artisan('migrate', [
+			'--realpath' => realpath(__DIR__ . '/resources/migrations')
 		]);
 	}
 }

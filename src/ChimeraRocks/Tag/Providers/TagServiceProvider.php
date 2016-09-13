@@ -25,6 +25,13 @@ class TagServiceProvider extends ServiceProvider
      */
 	public function register()
 	{
-		//Todo
+		$this->app->bind(
+			\ChimeraRocks\Tag\Repositories\TagRepositoryInterface::class,
+				\ChimeraRocks\Tag\Repositories\TagRepositoryEloquent::class
+		);
+		$this->app->bind(
+			\ChimeraRocks\Tag\Models\PostInterface::class,
+				\Test\Stubs\Models\Post::class
+		);
 	}
 }

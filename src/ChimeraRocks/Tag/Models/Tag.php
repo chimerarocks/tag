@@ -2,8 +2,10 @@
 
 namespace ChimeraRocks\Tag\Models;
 
+use ChimeraRocks\Tag\Models\Contracts\PostInterface;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\App;
 
 class Tag extends Model
 {
@@ -13,11 +15,6 @@ class Tag extends Model
 	protected $fillable = [
 		'name',
 	];
-
-	public function taggable()
-	{
-		return $this->morphTo();
-	}
 
 	public function setValidator(Validator $validator)
 	{
@@ -40,5 +37,16 @@ class Tag extends Model
 			return false;
 		}
 		return true;
+	}
+
+	public function posts()
+	{
+		$post = App::make(PostInterface::class);
+		return $this->morphedByMany($post, 'taggable', 'chimerarocks_taggables');
+	}
+
+	public function user()
+	{
+		return $this->belongsTo(User::class);
 	}
 }

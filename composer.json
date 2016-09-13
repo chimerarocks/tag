@@ -6,7 +6,9 @@
 		"illuminate/http": "~5.2",
 		"illuminate/support": "~5.2",
 		"illuminate/database": "~5.2",
-		"illuminate/validation": "~5.2"
+		"illuminate/validation": "~5.2",
+		"chimerarocks/user": "^0.1.0",
+		"chimerarocks/database": "^0.0.2"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~5.0",

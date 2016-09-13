@@ -4,9 +4,95 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8875876738ac47de2ce1917e9e3f0336",
-    "content-hash": "a748e6e24fd5eabbfca1b314ebf200bd",
+    "hash": "86a8c6e2880242a209a6f57dbebcb4d0",
+    "content-hash": "fccc336082ac33132cfd3c5011d3b4c0",
     "packages": [
+        {
+            "name": "chimerarocks/database",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chimerarocks/database.git",
+                "reference": "510f82020ecb7cd45ee653fb7448ea002d0f3233"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chimerarocks/database/zipball/510f82020ecb7cd45ee653fb7448ea002d0f3233",
+                "reference": "510f82020ecb7cd45ee653fb7448ea002d0f3233",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "~5.2",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "orchestra/testbench": "~3.0",
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ChimeraRocks\\Database\\": "src/ChimeraRocks/Database",
+                    "Test\\": "tests/Test"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luiz Carlos",
+                    "email": "argentinaluiz@gmail.com"
+                },
+                {
+                    "name": "Wesley Williams",
+                    "email": "wesleywilliams@gmail.com"
+                },
+                {
+                    "name": "João Pedro",
+                    "email": "joaopedrodslv@gmail.com"
+                }
+            ],
+            "description": "A Repository pattern implementation library that was part of a Code Education course. But i decide to keep with the project.",
+            "time": "2016-08-20 00:33:49"
+        },
+        {
+            "name": "chimerarocks/user",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chimerarocks/user.git",
+                "reference": "aea69988c8d164869c6e7df889ed1db752cddafb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chimerarocks/user/zipball/aea69988c8d164869c6e7df889ed1db752cddafb",
+                "reference": "aea69988c8d164869c6e7df889ed1db752cddafb",
+                "shasum": ""
+            },
+            "require": {
+                "chimerarocks/database": "0.0.2",
+                "illuminate/auth": "~5.2",
+                "illuminate/support": "~5.2",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "orchestra/testbench": "~3.2.0",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ChimeraRocks\\User\\": "src/ChimeraRocks/User",
+                    "Test\\": "tests/Test"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2016-09-10 20:19:43"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",
